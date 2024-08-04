@@ -1,29 +1,15 @@
-# `glslView-nvim`
-
+# `glsl-viewer.nvim`
+<!--
 When editing GLSL shaders,
   this plugin provides the command `GlslView` which will open 
-  [glslViewer](https://github.com/patriciogonzalezvivo/glslViewer)
+  ![glslViewer][1]
   to the file being edited in the current buffer.
 By default, it is opened with the `-l` flag so that `glslViewer` will automatically listen
   for file changes,
   updating the preview as you save.
-
+-->
 ## 📦 Installation
-Install the plugin with your preferred package manager.
-For example,
-  in [packer](https://github.com/wbthomason/packer.nvim) simply:
-
-```lua
-  use { 'timtro/glslView-nvim', ft = 'glsl' }
-```
-Don't forget to `PackerCompile` after installation so that the plugin will only
-  be loaded for glsl files.
-You'll also need a plugin to detect the glsl filetype.
-
-
-#### Installing `glslViewer`
-See [installation](https://github.com/patriciogonzalezvivo/glslViewer/wiki/Installing)
-  in the glslViewer Wiki.
+> [!NOTE] This plugin depends on ![glslViewer][1] being installed and in your `$PATH` in order to work.
 
 
 ## ⚙️ Configuration
@@ -54,5 +40,7 @@ More primitively, one can call directly through Lua:
 ## 🧰 Alternatives
  * [vim-GlslViewer](https://github.com/patriciogonzalezvivo/vim-glslViewer) -
     Version drift seems to have rendered it useless (at this time) since it
-    laucnes the process with `&` to free up the UI, but this causes glslViewer
-    to stop rendering (and then in my case, close).
+    launches the process with `&` to free up the UI, but this causes glslViewer
+    to stop rendering -- and then, in my case, close
+
+[1]: https://github.com/patriciogonzalezvivo/glslViewer
